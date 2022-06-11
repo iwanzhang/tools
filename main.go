@@ -4,5 +4,7 @@ import "fmt"
 
 func main() {
 
-	fmt.Println("this is my first open source code")
+	fmt.Println(VERSION)
 }
+
+const VERSION = "0.0.1"
