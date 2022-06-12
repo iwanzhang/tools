@@ -12,7 +12,7 @@ import (
 func main() {
 
 	logName := fmt.Sprintf("./log/access_log.")
-	r, _ := rotatelogs.New(logName + "%Y%m%d")
+	r, _ := rotatelogs.New(logName + "%Y%m%d%H%M%S")
 	mw := io.MultiWriter(os.Stdout, r)
 	log.SetOutput(mw)
 	log.Info("something ....")
