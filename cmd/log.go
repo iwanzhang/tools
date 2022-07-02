@@ -1,19 +1,28 @@
 package main
 
 import (
-	"fmt"
-	"io"
-	"os"
+	"time"
 
-	rotatelogs "github.com/lestrrat-go/file-rotatelogs"
-	log "github.com/sirupsen/logrus"
+	"gobot.io/x/gobot"
+	"gobot.io/x/gobot/drivers/gpio"
+	"gobot.io/x/gobot/platforms/firmata"
 )
 
 func main() {
+	firmataAdaptor := firmata.NewAdaptor("/dev/ttyACM0")
+	led := gpio.NewLedDriver(firmataAdaptor, "13")
 
-	logName := fmt.Sprintf("./log/access_log.")
-	r, _ := rotatelogs.New(logName + "%Y%m%d%H%M%S")
-	mw := io.MultiWriter(os.Stdout, r)
-	log.SetOutput(mw)
-	log.Info("something ....")
+	work := func() {
+		gobot.Every(1*time.Second, func() {
+			led.Toggle()
+		})
+	}
+
+	robot := gobot.NewRobot("bot",
+		[]gobot.Connection{firmataAdaptor},
+		[]gobot.Device{led},
+		work,
+	)
+
+	robot.Start()
 }
