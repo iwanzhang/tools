@@ -5,11 +5,11 @@ go 1.18
 require (
 	github.com/Shopify/sarama v1.34.1
 	github.com/gin-gonic/gin v1.8.1
-	github.com/linvon/cuckoo-filter v0.4.0
 	github.com/markbates/pkger v0.17.1
 	github.com/robfig/cron/v3 v3.0.1
 	go.mongodb.org/mongo-driver v1.9.1
 	gobot.io/x/gobot v1.16.0
+	golang.org/x/exp v0.0.0-20220613132600-b0d781184e0d
 	gopkg.in/mgo.v2 v2.0.0-20190816093944-a6b53ec6cb22
 )
 
@@ -17,7 +17,6 @@ require (
 	github.com/JuulLabs-OSS/cbgo v0.0.2 // indirect
 	github.com/creack/goselect v0.1.1 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
-	github.com/dgryski/go-metro v0.0.0-20200812162917-85c65e2d0165 // indirect
 	github.com/eapache/go-resiliency v1.2.0 // indirect
 	github.com/eapache/go-xerial-snappy v0.0.0-20180814174437-776d5712da21 // indirect
 	github.com/eapache/queue v1.1.0 // indirect

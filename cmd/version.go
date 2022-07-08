@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"github.com/robfig/cron/v3"
 	"log"
-	"os"
 	"runtime"
 	"strconv"
 	"sync"
@@ -77,23 +76,23 @@ func multiTask(wg *sync.WaitGroup, ch chan interface{}, f func()) {
 
 }
 
-func main() {
-
-	mm := make(map[string]map[string]int)
-
-	if _, ok := mm["1"]; !ok {
-		mm["1"] = make(map[string]int)
+func ArrayMerge(ss ...[]interface{}) []interface{} {
+	n := 0
+	for _, v := range ss {
+		n += len(v)
 	}
-	mm["1"]["2"] = 2
-	mm["1"]["3"] = 3
+	s := make([]interface{}, 0, n)
+	for _, v := range ss {
+		s = append(s, v...)
+	}
+	return s
+}
+func main() {
 
 	//m := make(map[string]int, 0)
 	//m["1"] = 1
 	//m["2"] = 2
 	//m["3"] = 3
-
-	fmt.Println(mm)
-	os.Exit(0)
 
 	type A struct {
 		Biz  string
