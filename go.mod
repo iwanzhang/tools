@@ -6,10 +6,10 @@ require (
 	github.com/Shopify/sarama v1.34.1
 	github.com/gin-gonic/gin v1.8.1
 	github.com/markbates/pkger v0.17.1
+	github.com/nsqio/go-nsq v1.1.0
 	github.com/robfig/cron/v3 v3.0.1
 	go.mongodb.org/mongo-driver v1.9.1
 	gobot.io/x/gobot v1.16.0
-	golang.org/x/exp v0.0.0-20220613132600-b0d781184e0d
 	gopkg.in/mgo.v2 v2.0.0-20190816093944-a6b53ec6cb22
 )
 
@@ -32,6 +32,7 @@ require (
 	github.com/godbus/dbus/v5 v5.0.3 // indirect
 	github.com/gofrs/uuid v4.0.0+incompatible // indirect
 	github.com/golang/snappy v0.0.4 // indirect
+	github.com/google/go-cmp v0.5.8 // indirect
 	github.com/hashicorp/errwrap v1.0.0 // indirect
 	github.com/hashicorp/go-multierror v1.1.1 // indirect
 	github.com/hashicorp/go-uuid v1.0.2 // indirect
