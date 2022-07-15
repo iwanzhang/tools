@@ -5,14 +5,12 @@ go 1.18
 require (
 	github.com/Shopify/sarama v1.34.1
 	github.com/gin-gonic/gin v1.8.1
-	github.com/golang/protobuf v1.5.2
 	github.com/markbates/pkger v0.17.1
 	github.com/nsqio/go-nsq v1.1.0
 	github.com/robfig/cron/v3 v3.0.1
 	go.mongodb.org/mongo-driver v1.9.1
 	gobot.io/x/gobot v1.16.0
 	google.golang.org/grpc v1.48.0
-	google.golang.org/grpc/examples v0.0.0-20220714235218-30d54d398f70
 	google.golang.org/protobuf v1.28.0
 	gopkg.in/mgo.v2 v2.0.0-20190816093944-a6b53ec6cb22
 )
@@ -35,6 +33,7 @@ require (
 	github.com/goccy/go-json v0.9.7 // indirect
 	github.com/godbus/dbus/v5 v5.0.3 // indirect
 	github.com/gofrs/uuid v4.0.0+incompatible // indirect
+	github.com/golang/protobuf v1.5.2 // indirect
 	github.com/golang/snappy v0.0.4 // indirect
 	github.com/google/go-cmp v0.5.8 // indirect
 	github.com/hashicorp/errwrap v1.0.0 // indirect
