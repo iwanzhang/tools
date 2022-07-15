@@ -1,0 +1,14 @@
+grpc demo 提供了go的serve，go和py的client
+
+执行下面的命令在grpc目录下
+
+go-grpc 代码生成
+protoc --go_out=. --go_opt=paths=source_relative \
+    --go-grpc_out=. --go-grpc_opt=paths=source_relative \
+    helloworld/helloworld.proto
+
+
+py-grpc 代码生成 需要安装 grpc_tools
+python -m grpc_tools.protoc -Ihelloworld --python_out=./pyclient \
+    --grpc_python_out=./pyclient
+    helloworld/helloworld.proto
