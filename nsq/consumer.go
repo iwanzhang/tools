@@ -21,6 +21,7 @@ type MyHandler struct {
 // HandleMessage 是需要实现的处理消息的方法
 func (m *MyHandler) HandleMessage(msg *nsq.Message) (err error) {
 	fmt.Printf("%s recv from %v, msg:%v\n", m.Title, msg.NSQDAddress, string(msg.Body))
+	time.Sleep(1 * time.Second)
 	return
 }
 
@@ -33,9 +34,7 @@ func initConsumer(topic string, channel string, address string) (err error) {
 		fmt.Printf("create consumer failed, err:%v\n", err)
 		return
 	}
-	consumer := &MyHandler{
-		Title: "沙河1号",
-	}
+	consumer := &MyHandler{}
 	c.AddHandler(consumer)
 
 	// if err := c.ConnectToNSQD(address); err != nil { // 直接连NSQD
@@ -48,6 +47,7 @@ func initConsumer(topic string, channel string, address string) (err error) {
 
 func main() {
 	err := initConsumer("topic_demo", "first", "127.0.0.1:4161")
+	//err := initConsumer("topic_demo", "second", "127.0.0.1:4161")
 	if err != nil {
 		fmt.Printf("init consumer failed, err:%v\n", err)
 		return

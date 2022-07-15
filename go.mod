@@ -5,11 +5,15 @@ go 1.18
 require (
 	github.com/Shopify/sarama v1.34.1
 	github.com/gin-gonic/gin v1.8.1
+	github.com/golang/protobuf v1.5.2
 	github.com/markbates/pkger v0.17.1
 	github.com/nsqio/go-nsq v1.1.0
 	github.com/robfig/cron/v3 v3.0.1
 	go.mongodb.org/mongo-driver v1.9.1
 	gobot.io/x/gobot v1.16.0
+	google.golang.org/grpc v1.48.0
+	google.golang.org/grpc/examples v0.0.0-20220714235218-30d54d398f70
+	google.golang.org/protobuf v1.28.0
 	gopkg.in/mgo.v2 v2.0.0-20190816093944-a6b53ec6cb22
 )
 
@@ -66,7 +70,7 @@ require (
 	golang.org/x/sync v0.0.0-20201207232520-09787c993a3a // indirect
 	golang.org/x/sys v0.0.0-20220114195835-da31bd327af9 // indirect
 	golang.org/x/text v0.3.7 // indirect
-	google.golang.org/protobuf v1.28.0 // indirect
+	google.golang.org/genproto v0.0.0-20200825200019-8632dd797987 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	tinygo.org/x/bluetooth v0.2.0 // indirect
 )

@@ -24,8 +24,8 @@ func initProducer(str string) (err error) {
 }
 
 func main() {
-	//nsqAddress := "127.0.0.1:4150"
-	nsqAddress := "127.0.0.1:4250"
+	nsqAddress := "127.0.0.1:4150"
+	//nsqAddress := "127.0.0.1:4250"
 	err := initProducer(nsqAddress)
 	if err != nil {
 		fmt.Printf("init producer failed, err:%v\n", err)
@@ -54,7 +54,7 @@ func main() {
 	var data uint64
 	for {
 		data++
-		_ = producer.Publish("topic_demo", []byte(strconv.FormatUint(data, 10)))
-		time.Sleep(100 * time.Millisecond)
+		_ = producer.Publish("topic_demo", []byte(strconv.FormatUint(data, 10)+"-online"))
+		time.Sleep(1 * time.Second)
 	}
 }
